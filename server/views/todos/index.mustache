@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todos</title>
+  </head>
+  <body>
+    <form class="" action="/todos/add" method="post">
+      <input type="text" name="toDoItem" value="">
+      <button type="submit" name="button">Add todo</button>
+    </form>
+
+    <h1>Todos</h1>
+    <ul>
+      <form class="" action="/todos/done" method="post">
+        {{#todos}}
+          {{^completed}}
+            <li>
+              <a href="/todos/{{id}}">{{description}}</a>
+              <button type="submit" name="button" value="{{id}}">Complete</button>
+              <button type="submit" name="edit" value="{{id}}">Edit</button>
+            </li>
+          {{/completed}}
+        {{/todos}}
+      </form>
+
+    <h2>Completed</h2>
+      <form class="" action="/todos/delete" method="post">
+        {{#todos}}
+          {{#completed}}
+          <li>
+            <a href="/todos/{{id}}">{{description}}</a>
+            <button type="submit" name="button" value="{{id}}">DELETE</button>
+          </li>
+          {{/completed}}
+        {{/todos}}
+      </form>
+    </ul>
+  </body>
+</html>

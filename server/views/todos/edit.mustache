@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <h1>Change It</h1>
+    {{#todo}}
+      <form class="" action="/todos/{{id}}/editing" method="post">
+          <input type="text" name="edited" value="{{description}}">
+          <button type="submit" name="button">Submit</button>
+      </form>
+    {{/todo}}
+  </body>
+</html>

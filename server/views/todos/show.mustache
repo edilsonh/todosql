@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo</title>
+  </head>
+  <body>
+    <h1>Todo</h1>
+    {{#todo}}
+      <h2>{{description}}</h2>
+      <p>
+      {{#completed}}
+        DONE
+      {{/completed}}
+      {{^completed}}
+        NOT COMPLETED
+      {{/completed}}
+      </p>
+    {{/todo}}
+  </body>
+</html>

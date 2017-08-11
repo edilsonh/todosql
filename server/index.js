@@ -55,6 +55,7 @@ app.use(
 // **************** ROUTES ↓
 
 app.use("/", require("./routes/homepage"));
+app.use("/todos", require("./routes/todos"));
 
 // **************** ROUTES ↑
 

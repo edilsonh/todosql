@@ -17,7 +17,9 @@
     "express-session": "^1.15.4",
     "express-validator": "^3.2.1",
     "morgan": "^1.8.2",
-    "mustache-express": "^1.2.5"
+    "mustache-express": "^1.2.5",
+    "pg": "^7.1.0",
+    "sequelize": "^4.4.2"
   },
   "devDependencies": {
     "jest": "^20.0.4",
